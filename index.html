@@ -4,52 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JijiCat</title>
-<style>
-  /* Устанавливаем начальные стили для строки */
+  <style>
   #movingText {
     position: absolute;
-    font-size: 20px; /* Размер текста 20px */
+    font-size: 20px;
     left: 0;
     top: 50%;
     white-space: nowrap;
-    animation: moveText 10s linear infinite; /* Анимация движения */
-    animation-timing-function: ease-in-out; /* Эффект ветра */
-    color: black; /* Черный цвет текста */
+    animation: moveText 10s linear infinite;
+    animation-timing-function: ease-in-out;
+    color: black;
   }
 
-  /* Определяем анимацию для движения текста */
   @keyframes moveText {
     0% {
       transform: translateX(0);
     }
     45% {
-      transform: translateX(calc(50vw - 10px)); /* Остановка посередине экрана */
+      transform: translateX(calc(50vw - 10px));
     }
     55% {
-      transform: translateX(calc(50vw + 10px)); /* Передвигаем текст за границу экрана */
+      transform: translateX(calc(50vw + 10px));
     }
     100% {
-      transform: translateX(calc(100vw + 20px)); /* Движение за экран */
+      transform: translateX(calc(100vw + 20px));
     }
   }
 
-  /* Добавляем анимацию для фона страницы */
   html, body {
-    height: 100%; /* Установка высоты на 100% для всей страницы */
-    margin: 0; /* Убираем отступы по умолчанию */
-    padding: 0; /* Убираем внутренние отступы по умолчанию */
-    overflow: hidden; /* Убираем прокрутку страницы */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
   }
 
   body {
     animation: changeBackground 20s linear infinite;
-    background-attachment: scroll; /* Фон прокручивается */
-    background-size: 500% 100%; /* Увеличиваем размер фона */
-    background-repeat: repeat-x; /* Повторяем фон только горизонтально */
-    background-image: linear-gradient(90deg, #ffcccc, #cc99ff, #99ff99, #ffcc99, #ccff99, #ffcccc, #cc99ff); /* Градиентный фон с пастельными цветами */
+    background-attachment: scroll;
+    background-size: 500% 100%;
+    background-repeat: repeat-x;
+    background-image: linear-gradient(90deg, #ffcccc, #cc99ff, #99ff99, #ffcc99, #ccff99, #ffcccc, #cc99ff);
   }
 
-  /* Определяем анимацию для изменения фона */
   @keyframes changeBackground {
     0% {
       background-position: 0%;
@@ -58,7 +54,7 @@
       background-position: 100%;
     }
   }
-</style>
+  </style>
 </head>
 <body>
   <div id="movingText">Kiki's Internet Services</div>
